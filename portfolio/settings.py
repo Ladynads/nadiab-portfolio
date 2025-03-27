@@ -25,7 +25,13 @@ SECRET_KEY = 'django-insecure-v9jr$&)9!jk$zqj=hzdep&x8z75i*dk&=$ax5mbupcubxd0tfs
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['nadiab.dev', 'www.nadiab.dev', 'nadiab-portfolio.herokuapp.com']
+ALLOWED_HOSTS = [
+     '127.0.0.1',
+    'localhost',
+    'nadiab.dev',
+    'www.nadiab.dev',
+    'nadiab-portfolio.herokuapp.com',
+]
 
 
 # Application definition
@@ -119,10 +125,13 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Enable WhiteNoise
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+# Default primary key field type
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
