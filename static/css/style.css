@@ -59,3 +59,171 @@ body {
     background: #bb86fc;
     color: #fff;
 }
+
+/* About me*/
+
+.about-me {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 4rem 2rem;
+}
+
+.about-me h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #bb86fc;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.about-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 20px rgba(187, 134, 252, 0.5);
+}
+
+.about-text {
+    text-align: center;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+@media (min-width: 768px) {
+    .about-content {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .about-text {
+        max-width: 600px;
+    }
+}
+
+/* Projects */
+.projects {
+    background-color: #0f0f0f;
+    color: #fff;
+    padding: 4rem 2rem;
+}
+
+.projects h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #bb86fc;
+}
+
+.project-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background: #1e1e1e;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(187, 134, 252, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.project-links {
+    margin-top: 1rem;
+}
+
+.project-links a {
+    display: inline-block;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    color: #bb86fc;
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .project-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Contact section */
+.contact {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    color: #bb86fc;
+    margin-bottom: 1rem;
+}
+
+.contact-message {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.email-link {
+    display: inline-block;
+    font-size: 1.1rem;
+    background-color: #bb86fc;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    transition: background 0.3s ease;
+}
+
+.email-link:hover {
+    background-color: #a362ea;
+}
+
+.social-icons {
+    margin-top: 1.5rem;
+}
+
+.social-icons a {
+    margin: 0 1rem;
+    color: #bb86fc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #fff;
+}
