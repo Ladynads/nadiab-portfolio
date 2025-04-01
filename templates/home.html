@@ -1,106 +1,331 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Nadia Bakal | Full-Stack Developer</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-<body>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
     <!--Hero section-->
-    <header class="hero">
-        <div class="hero-content">
-            <img src="{% static 'images/nadia-bakal.jpg' %}" alt="Nadia Bakal" class="hero-image" id="profile-pic">
-            <h1>Hi, I'm <span class="name">Nadia</span></h1>
-            <p>I build beautiful, functional, and meaningful web experiences.</p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn">📂 View My Work</a>
-                <a href="#contact" class="btn outline">📧 Contact Me</a>
-            </div>
+    <header class="hero-section">
+      <div class="hero-container">
+        <div class="hero-left">
+          <p class="hero-subnote fade-in" date-delay="0">
+            Full-Stack Certified • Scrum Master • Multilingual • Purpose-Driven
+          </p>
+          <h1 class="fade-in" data-delay="0.2">
+            Hi, I'm <span class="name">Nadia</span>
+          </h1>
+          <p class="hero-tagline fade-in" data-delay="0.4">
+            Full-Stack Developer passionate about building meaningful digital
+            experiences
+          </p>
+          <p class="hero-intro fade-in" data-delay="0.6">
+            Formerly an Operational Manager in the UK Ministry of Justice for
+            over a decade, I’ve now channeled my problem-solving, leadership,
+            and strategic thinking into the world of software development.
+          </p>
+
+          <p class="hero-intro fade-in" data-delay="0.8">
+            I build full-stack applications that are not just functional, but
+            intuitive and impactful. Purpose-led and growth-minded, I thrive in
+            collaborative environments and love bringing value to mission-driven
+            tech teams.
+          </p>
+
+          <div class="hero-buttons fade-in" data-delay="1.1">
+            <a href="#about" class="btn outline">About Me</a>
+            <a href="#projects" class="btn outline">View My Work</a>
+            <a href="#testimonials" class="btn outline">Testimonials</a>
+            <a href="#contact" class="btn outline">Contact</a>
+          </div>
         </div>
+        <div class="hero-right hero-image-wrapper">
+          <div class="image-glow-overlay"></div>
+          <img
+            src="{% static 'images/nadiabakal1.png' %}"
+            alt="Nadia Bakal"
+            class="hero-image-glow"
+          />
+        </div>
+      </div>
     </header>
 
-    <!--about me section-->
-    <section class="about-me" id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <img src="{% static 'images/nadia-casual.jpg' %}" alt="Nadia casual" class="about-image">
-                <div class="about-text">
-                    <p>
-                        I'm Nadia, a Full-Stack Developer with a background in justice and leadership, now creating beautiful, meaningful, and accessible web experiences.
-                    </p>
-                    <p>
-                        After 10+ years in government, I followed my passion for technology and completed an intensive coding bootcamp. I love bringing ideas to life with HTML, CSS, JavaScript, and Django.
-                    </p>
-                    <p>
-                        My mission? To build web projects that empower, inspire, and uplift ✨
-                    </p>
-                </div>
-            </div>
+    <!-- About Me Section -->
+    <section id="about" class="about-me">
+      <div class="about-container">
+        <!-- Left: Text -->
+        <div class="about-text">
+          <h2>About Me</h2>
+          <p class="about-subtitle">
+            Creative mind. Soul-led code. Built for impact.
+          </p>
+
+          <p>
+            Hi, I’m Nadia, a full-stack developer with a creative soul and a
+            love for purposeful tech. After 10+ years leading operations at the
+            UK Ministry of Justice, I chose to follow what truly lit me up:
+            building tools, communities, and digital experiences that uplift and
+            inspire.
+          </p>
+          <p>
+            Between careers, I traveled through Thailand, immersing in new
+            cultures and cuisines. Born and raised in a small Dutch town, now
+            based in the UK, I speak Somali, Dutch, and English and I cherish
+            connection across languages and borders.
+          </p>
+          <p>
+            I believe in vibrating higher and creating experiences infused with
+            love, curiosity, and intention whether it's clean code, elegant UI,
+            or intuitive systems that just flow.
+          </p>
+          <p class="about-credentials">
+            Scrum Master + Full-Stack Developer Certified | <br />
+            <a
+              href="https://www.credential.net/profile/nadiabakal927273/wallet"
+              target="_blank"
+              >View My Credentials</a
+            >
+          </p>
         </div>
+
+        <!-- Right: Image -->
+        <div class="about-image-wrapper">
+          <img
+            src="{% static 'images/nadia-casual.jpg' %}"
+            alt="Nadia Bakal"
+            class="about-glow-image"
+          />
+        </div>
+      </div>
     </section>
-    
+
     <!--Projects section-->
-    <section class="projects" id="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="project-grid">
-                <!-- 🧩 Project Card 1 -->
-                <div class="project-card">
-                    <img src="{% static 'images/project1.png' %}" alt="Project 1">
-                    <h3>CreatorVerse</h3>
-                    <p>Invite-only creator guild with AI-powered content suggestions, role-based access, and community features. Built with Django.</p>
-                    <div class="project-links">
-                        <a href="https://creatorverse.heroku.com" target="_blank">🌐 Live</a>
-                        <a href="https://github.com/Ladynads/creatorverse" target="_blank">🔗 GitHub</a>
-                    </div>
-                </div>
-    
-                <!-- 🧩 Project Card 2 -->
-                <div class="project-card">
-                    <img src="{% static 'images/project2.png' %}" alt="Project 2">
-                    <h3>Emoji Guess Game</h3>
-                    <p>A fun, interactive emoji guessing game built with HTML, CSS, and JavaScript. Accessible and beginner-friendly.</p>
-                    <div class="project-links">
-                        <a href="https://your-game-link.com" target="_blank">🌐 Live</a>
-                        <a href="https://github.com/Ladynads/emoji-guess" target="_blank">🔗 GitHub</a>
-                    </div>
-                </div>
-    
-                <!-- 🧩 Project Card 3 -->
-                <div class="project-card">
-                    <img src="{% static 'images/project3.png' %}" alt="Project 3">
-                    <h3>Her Mental Wellness</h3>
-                    <p>A supportive site offering mental health resources and affirmations for women. Built with Bootstrap, HTML, CSS.</p>
-                    <div class="project-links">
-                        <a href="https://your-live-link.com" target="_blank">🌐 Live</a>
-                        <a href="https://github.com/Ladynads/her-mental-wellness" target="_blank">🔗 GitHub</a>
-                    </div>
-                </div>
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="project-grid">
+          <!-- 🧩 Project Card 1 -->
+          <div class="project-card">
+            <img src="{% static 'images/project1.png' %}" alt="Project 1" />
+            <h3>CreatorVerse</h3>
+            <p>
+              Invite-only creator guild with AI-powered content suggestions,
+              role-based access, and community features. Built with Django.
+            </p>
+            <div class="project-badges">
+              <span class="badge">Python</span>
+              <span class="badge">Django</span>
+              <span class="badge">PostgreSQL</span>
+              <span class="badge">HTML</span>
+              <span class="badge">CSS</span>
             </div>
+            <div class="project-links">
+              <a href="https://creatorverse.heroku.com" target="_blank"
+                >🌐 Live</a
+              >
+              <a href="https://github.com/Ladynads/creatorverse" target="_blank"
+                >🔗 GitHub</a
+              >
+            </div>
+          </div>
+
+          <!-- 🧩 Project Card 2 -->
+          <div class="project-card">
+            <img src="{% static 'images/project2.png' %}" alt="Project 2" />
+            <h3>Emoji Guess Game</h3>
+            <p>
+              A fun, interactive emoji guessing game built with HTML, CSS, and
+              JavaScript. Accessible and beginner-friendly.
+            </p>
+            <div class="project-badges">
+              <span class="badge">HTML</span>
+              <span class="badge">CSS</span>
+              <span class="badge">JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://your-game-link.com" target="_blank">🌐 Live</a>
+              <a href="https://github.com/Ladynads/emoji-guess" target="_blank"
+                >🔗 GitHub</a
+              >
+            </div>
+          </div>
+
+          <!-- 🧩 Project Card 3 -->
+          <div class="project-card">
+            <img src="{% static 'images/project3.png' %}" alt="Project 3" />
+            <h3>Her Mental Wellness</h3>
+            <p>
+              A supportive site offering mental health resources and
+              affirmations for women. Built with Bootstrap, HTML, CSS.
+            </p>
+            <div class="project-badges">
+              <span class="badge">HTML</span>
+              <span class="badge">CSS</span>
+              <span class="badge">Bootstrap</span>
+              <span class="badge">UX Design</span>
+            </div>
+            <div class="project-links">
+              <a href="https://your-live-link.com" target="_blank">🌐 Live</a>
+              <a
+                href="https://github.com/Ladynads/her-mental-wellness"
+                target="_blank"
+                >🔗 GitHub</a
+              >
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <!--Testimonals section-->
+    <section class="testimonials" id="testimonials">
+      <div class="container testimonial-wrapper">
+        <h2>Testimonials</h2>
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <p>
+              “Nadia brought creativity, clarity, and contagious energy to our
+              project. A true team player!”
+            </p>
+            <h4>— Bootcamp Teammate</h4>
+          </div>
+          <div class="testimonial-card">
+            <p>
+              “An absolute gem to work with — organized, kind, and technically
+              sharp.”
+            </p>
+            <h4>— Peer Developer</h4>
+          </div>
+          <div class="testimonial-card">
+            <p>
+              “Nadia always went the extra mile. She’s got that 🔥 developer
+              spark.”
+            </p>
+            <h4>— Instructor</h4>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!--Contact section-->
     <section class="contact" id="contact">
-        <div class="container">
-            <h2>Let’s Connect</h2>
-            <p class="contact-message">
-                Have a project in mind? Just want to say hi? I’d love to hear from you.
-            </p>
-            <a href="mailto:hello@nadiab.dev" class="email-link">📧 hello@nadiab.dev</a>
-    
-            <div class="social-icons">
-                <a href="https://github.com/Ladynads" target="_blank">🐙 GitHub</a>
-                <a href="https://www.linkedin.com/in/nadia-bakal-401977146/" target="_blank">💼 LinkedIn</a>
-            </div>
+      <div class="container">
+        <h2>Let’s Connect</h2>
+        <p class="contact-message">
+          I’m currently open to full-time, freelance, or collaborative roles in
+          web development. If you’re looking for someone who codes with purpose
+          and passion, I’d love to connect!
+        </p>
+        <a href="mailto:hello@nadiab.dev" class="email-link"
+          >📧 hello@nadiab.dev</a
+        >
+
+        <div class="social-icons">
+          <a href="https://github.com/Ladynads" target="_blank">🐙 GitHub</a>
+          <a
+            href="https://www.linkedin.com/in/nadia-bakal-401977146/"
+            target="_blank"
+            >💼 LinkedIn</a
+          >
         </div>
+      </div>
     </section>
-    
 
+    <script>
+      const cards = document.querySelectorAll(".project-card");
 
-    
-    
-</body>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+        }
+      );
+
+      cards.forEach((card) => {
+        observer.observe(card);
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const testimonialCards = document.querySelectorAll(".testimonial-card");
+
+        const observer = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                testimonialCards.forEach((card, index) => {
+                  card.style.animationDelay = `${index * 0.3}s`;
+                  card.classList.add("animate");
+                });
+                observer.disconnect(); // stop observing after the first reveal
+              }
+            });
+          },
+          {
+            threshold: 0.2,
+          }
+        );
+
+        testimonialCards.forEach((card) => {
+          observer.observe(card);
+        });
+      });
+    </script>
+
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const fadeEls = document.querySelectorAll(".fade-in");
+
+        fadeEls.forEach((el) => {
+          const delay = el.getAttribute("data-delay") || 0;
+          setTimeout(() => {
+            el.classList.add("visible");
+          }, delay * 1000); // converts seconds to ms
+        });
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.2 }
+        );
+
+        document
+          .querySelectorAll(".about-text, .about-image-wrapper")
+          .forEach((el) => {
+            observer.observe(el);
+          });
+      });
+    </script>
+  </body>
 </html>
