@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nadia Bakal | Full-Stack Developer</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <img src="{% static 'images/nadia-bakal.jpg' %}" alt="Nadia Bakal" class="hero-image" id="profile-pic">
+            <h1>Hi, I'm <span class="name">Nadia</span></h1>
+            <p>I build beautiful, functional, and meaningful web experiences.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn">📂 View My Work</a>
+                <a href="#contact" class="btn outline">📧 Contact Me</a>
+            </div>
+        </div>
+    </header>
+</body>
+</html>
