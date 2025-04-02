@@ -189,49 +189,65 @@
               “Nadia brought creativity, clarity, and contagious energy to our
               project. A true team player!”
             </p>
-            <h4> Bootcamp Teammate</h4>
+            <h4>Bootcamp Teammate</h4>
           </div>
           <div class="testimonial-card">
             <p>
               “An absolute gem to work with, organized, kind, and technically
               sharp.”
             </p>
-            <h4> Peer Developer</h4>
+            <h4>Peer Developer</h4>
           </div>
           <div class="testimonial-card">
             <p>
               “Nadia always went the extra mile. She’s got that developer
               spark.”
             </p>
-            <h4> Instructor</h4>
+            <h4>Instructor</h4>
           </div>
         </div>
       </div>
     </section>
 
-    <!--Contact section-->
-    <section class="contact" id="contact">
-      <div class="container">
-        <h2>Let’s Connect</h2>
-        <p class="contact-message">
-          I’m currently open to full-time, freelance, or collaborative roles in
-          web development. If you’re looking for someone who codes with purpose
-          and passion, I’d love to connect!
-        </p>
-        <a href="mailto:hello@nadiab.dev" class="email-link"
-          >📧 hello@nadiab.dev</a
-        >
-
-        <div class="social-icons">
-          <a href="https://github.com/Ladynads" target="_blank">🐙 GitHub</a>
-          <a
-            href="https://www.linkedin.com/in/nadia-bakal-401977146/"
-            target="_blank"
-            >💼 LinkedIn</a
-          >
+      <!-- Contact section -->
+      <section class="contact" id="contact">
+        <div class="contact-icon-wrapper">
+          <div class="flying-plane-wrapper">
+            <img
+              src="{% static 'images/paper-plane.png' %}"
+              alt="Paper Plane"
+              class="contact-icon"
+            />
+            <div class="plane-trail"></div>
+          </div>
         </div>
-      </div>
-    </section>
+        
+
+        <div class="contact-container fade-in" data-delay="0.2">
+          <h2>Let’s Connect</h2>
+          <p class="contact-message">
+            I’m currently open to full-time, freelance, or collaborative roles
+            in web development. If you’re looking for someone who codes with
+            purpose and passion, I’d love to connect!
+          </p>
+
+          <a href="mailto:hello@nadiab.dev" class="email-link-glow"
+            >hello@nadiab.dev</a
+          >
+
+          <div class="social-icons">
+            <a href="https://github.com/Ladynads" target="_blank">GitHub</a>
+            <a
+              href="https://www.linkedin.com/in/nadia-bakal-401977146/"
+              target="_blank"
+              >LinkedIn</a
+            >
+          </div>
+        </div>
+      </section>
+
+
+    <!--Javascript-->
 
     <script>
       const cards = document.querySelectorAll(".project-card");

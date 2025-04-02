@@ -520,67 +520,194 @@ html {
 
 /* Contact section */
 .contact {
-    background-color: #1a1a1a;
-    color: #fff;
-    padding: 6rem 2rem;
-    text-align: center;
+  background: radial-gradient(circle at top, #1a1a1a 40%, #0f0f0f 100%);
+  color: #fff;
+  padding: 6rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact::before {
+  content: "";
+  position: absolute;
+  top: -30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(187, 134, 252, 0.1), transparent 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.contact-container {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .contact h2 {
-    font-size: 2.5rem;
-    color: #bb86fc;
-    margin-bottom: 1rem;
+  font-size: 2.5rem;
+  color: #bb86fc;
+  margin-bottom: 1rem;
 }
 
 .contact-message {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #ccc;
+  line-height: 1.6;
 }
 
-.email-link {
-    display: inline-block;
-    font-size: 1.1rem;
-    background-color: #bb86fc;
-    color: #fff;
-    padding: 0.75rem 1.5rem;
-    border-radius: 30px;
-    text-decoration: none;
-    margin-bottom: 1rem;
-    transition: background 0.3s ease;
+.email-link-glow {
+  display: inline-block;
+  font-size: 1.1rem;
+  background-color: transparent;
+  color: #bb86fc;
+  border: 2px solid #bb86fc;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(187, 134, 252, 0.3);
 }
 
-.email-link:hover {
-    background-color: #c092f9;
+.email-link-glow:hover {
+  background-color: #bb86fc;
+  color: #1a1a1a;
+  box-shadow: 0 0 20px rgba(187, 134, 252, 0.5);
 }
 
 .social-icons {
-    margin-top: 1.5rem;
+  margin-top: 2rem;
 }
 
 .social-icons a {
-    margin: 0 1rem;
-    color: #bb86fc;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
+  margin: 0 1rem;
+  color: #bb86fc;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-    color: #fff;
+  color: #fff;
 }
 
-.about-me a {
-    color: #bb86fc;
-    text-decoration: underline;
-    transition: color 0.3s ease;
+.contact-icon-wrapper {
+  position: relative;
+  height: 180px;
+  width: 100%; /* ✨ make it stretch across */
+  margin-bottom: 2rem;
+  overflow: visible;
+}
+
+
+.flying-plane-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  animation: flyCurve 6s ease-in-out forwards;
+  z-index: 2;
+}
+
+.contact-icon {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0 10px #bb86fc);
+}
+
+.plane-trail {
+  position: absolute;
+  top: 55%; /* slightly lower for visibility */
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(to right, #bb86fc, transparent);
+  filter: blur(6px);
+  opacity: 0;
+  animation: trailGrow 6s ease-in-out forwards;
+  z-index: 1;
+}
+
+/* ✨ Smooth curve path */
+@keyframes flyCurve {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0;
   }
-  
-  .about-me a:hover {
-    color: #d1aaff;
+  10% {
+    opacity: 1;
   }
-  
+  25% {
+    transform: translate(25vw, -3vh) rotate(10deg);
+  }
+  50% {
+    transform: translate(50vw, 2vh) rotate(-10deg);
+  }
+  75% {
+    transform: translate(70vw, -2vh) rotate(5deg);
+  }
+  100% {
+    transform: translate(90vw, 0px) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+
+/* ✨ Coordinated glowing trail */
+@keyframes trailGrow {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.5;
+  }
+  60% {
+    width: 60vw;
+    opacity: 0.4;
+  }
+  100% {
+    width: 80vw;
+    opacity: 0;
+  }
+}
+
+
+
+@keyframes trailFade {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.3;
+  }
+  100% {
+    width: 300px;
+    opacity: 0;
+  }
+}
+
+
+
+
+/* Fade in on scroll */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 
